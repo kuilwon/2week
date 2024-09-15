@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>共有する</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500&display=swap'); /* Noto Sans JP 폰트 */
+        @import url('https://fonts.googleapis.com/css2?family=Switzer:wght@400&display=swap'); /* Switzer 폰트 */
+
+        body {
+            margin: 0; /* 기본 여백 제거 */
+            overflow: hidden; /* 넘치는 부분 숨김 */
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .text-section {
+            position: absolute;
+            top: 50.3034px; /* 첫 번째 텍스트 블록 세로 위치 */
+            left: 65.3034px; /* 첫 번째 텍스트 블록 가로 위치 */
+            width: 30%;
+            color: #E2DAB5;
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 10pt; /* 첫 번째 텍스트 블록: 10pt */
+            line-height: 15pt; /* 첫 번째 텍스트 블록: 15pt */
+            font-weight: 300; /* 첫 번째 텍스트 블록: Light 굵기 */
+        }
+
+        .song-image {
+            width: 20%;
+            height: auto;
+            position: absolute;
+            left: 1298.6176px; /* 오른쪽 이미지의 가로 위치 */
+            top: 230.0361px; /* 오른쪽 이미지의 세로 위치 */
+            transform: translateY(0);
+            cursor: pointer; /* 클릭 가능한 버튼 모양 */
+        }
+
+        .text-below-image {
+            position: absolute;
+            left: 1385px; /* 두 번째 텍스트 블록의 가로 위치 */
+            top: 585px; /* 두 번째 텍스트 블록의 세로 위치 */
+            color: #FFFFFF; /* 텍스트 색상 */
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 12pt;
+            font-weight: 500; /* 두 번째 텍스트 블록: Medium 굵기 */
+        }
+
+        .third-text-block {
+            position: absolute;
+            left: 1385px; /* 세 번째 텍스트 블록의 가로 위치 */
+            top: 612px; /* 세 번째 텍스트 블록의 세로 위치 */
+            color: #B3B3B3; /* 텍스트 색상 */
+            font-family: 'Switzer', sans-serif;
+            font-size: 12pt;
+            font-weight: 400; /* 세 번째 텍스트 블록: Regular 굵기 */
+        }
+
+        .fourth-text-block {
+            position: absolute;
+            left: 65.3034px; /* 네 번째 텍스트 블록의 가로 위치 */
+            top: 850px; /* 네 번째 텍스트 블록의 세로 위치 */
+            color: #FFFFFF; /* 텍스트 색상 */
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 12pt;
+            font-weight: 500; /* 네 번째 텍스트 블록: Medium 굵기 */
+        }
+
+        .fifth-text-block {
+            position: absolute;
+            left: 230px; /* 다섯 번째 텍스트 블록의 가로 위치 */
+            top: 850px; /* 다섯 번째 텍스트 블록의 세로 위치 */
+            color: #B3B3B3; /* 텍스트 색상 */
+            font-family: 'Switzer', sans-serif;
+            font-size: 12pt;
+            font-weight: 400; /* 다섯 번째 텍스트 블록: Regular 굵기 */
+        }
+
+        .navigation {
+            position: absolute;
+            left: 65.3034px; /* 네비게이션 원의 가로 위치 */
+            top: 920px; /* 네비게이션 원의 세로 위치 */
+            display: flex;
+            gap: 10px;
+        }
+
+        .circle {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: gray;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .circle:hover {
+            background-color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+    <!-- Page 1 -->
+    <div class="container" id="page1">
+        <!-- 배경 이미지 -->
+        <img src="keiichi.png" alt="Background" class="background">
+        <div class="content">
+            <!-- 첫 번째 텍스트 섹션 -->
+            <div class="text-section">
+                <p>あぁ<br>
+                あの娘今頃何してるだろうって<br>
+                考えてる 考えてる<br>
+                もう どうしようもないことばかりが<br>
+                この星を包む この星を包む<br>
+                サテライトから見下ろせば<br>
+                街はとてもきれいで 不思議<br>
+                コーヒーとアップルパイ<br>
+                愛の Laugh & cry<br>
+                夜にぶら下がり 揺れているBoy<br><br>
+
+                あぁ 言葉は全然役立たずで<br>
+                追いつかない 追いつけない<br>
+                動物のにおいのする夜が<br>
+                この星を包む この星を包む<br>
+                サテライトから24時間の幻みてる なんて不思議<br>
+                コーヒーとアップルパイ<br>
+                愛の Laugh & cry<br>
+                夜にぶら下がり 揺れているBoy<br><br>
+
+                コーヒーとアップルパイ<br>
+                愛の Laugh & cry<br>
+                夜にぶら下がり 揺れているBoy</p>
+            </div>
+            <!-- 오디오 요소 -->
+            <audio id="audio-player1" src="song1.mp3"></audio>
+            <!-- 오른쪽 이미지 (버튼 역할) -->
+            <img src="song1.jpg" alt="Song Image" class="song-image" onclick="togglePlay1()">
+            <!-- 두 번째 텍스트 (오른쪽 하단) -->
+            <div class="text-below-image">
+                <p>コーヒーとアップルパイ</p>
+            </div>
+            <!-- 세 번째 텍스트 블록 -->
+            <div class="third-text-block">
+                <p>coffee and apple pie</p>
+            </div>
+            <!-- 네 번째 텍스트 블록 -->
+            <div class="fourth-text-block">
+                <p>曽我部 浩一</p>
+            </div>
+            <!-- 다섯 번째 텍스트 블록 -->
+            <div class="fifth-text-block">
+                <p>sokabe keiichi</p>
+            </div>
+        </div>
+        <!-- 네비게이션 원 세 개 -->
+        <div class="navigation">
+            <div class="circle" style="background-color: #E2DAB5;" onclick="navigate(1)"></div>
+            <div class="circle" style="background-color: #B3B3B3;" onclick="navigate(2)"></div>
+            <div class="circle" style="background-color: #B3B3B3;" onclick="navigate(3)"></div>
+        </div>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="container" id="page2" style="display: none;">
+        <!-- 배경 이미지 -->
+        <img src="parismatch.png" alt="Background" class="background">
+        <div class="content">
+            <!-- 첫 번째 텍스트 섹션 -->
+            <div class="text-section" style="color: #E0C0B6;">
+                <p>Stay with me<br>
+                過去と未来のあいだに<br>
+                はりつめた いまをゆるめて<br>
+                Stay with me<br>
+                水辺のせせらぎ 聴いて<br>
+                眠るまで 恋を ひとひら<br>
+                Stay with me<br>
+                しなやか<br>
+                ひそかな響きに浮かれていたい<br>
+                Stay with me<br>
+                巴里の画布に 描いた幻まで<br>
+                抱きしめたいふりをして<br>
+                Stay with me<br>
+                檸檬の香りと 黄色が映えた空に<br>
+                隠されたラプソディ<br>
+                Stay with me<br>
+                あなたに触れてほしいの<br>
+                踊るから サテンのドレスで<br>
+                Stay with me<br>
+                サヨナラ サヨナラ<br>
+                あなたは 驚かないの？<br>
+                Stay with me<br>
+                ほんの少しは 自惚れてみたいから<br>
+                明晩はクロコのヒールで<br>
+                Stay with me<br>
+                窓辺で交した さりげない接吻に<br>
+                隠してたラプソディ</p>
+            </div>
+            <!-- 오디오 요소 -->
+            <audio id="audio-player2" src="song2.mp3"></audio>
+            <!-- 오른쪽 이미지 (버튼 역할) -->
+            <img src="song2.jpg" alt="Song Image" class="song-image" onclick="togglePlay2()">
+            <!-- 두 번째 텍스트 블록 -->
+            <div class="text-below-image" style="left: 1420px; font-family: 'Switzer', sans-serif;">
+                <p>Stay With Me</p>
+            </div>
+            <!-- 네 번째 텍스트 블록 -->
+            <div class="fourth-text-block">
+                <p>パリスマッチ</p>
+            </div>
+            <!-- 다섯 번째 텍스트 블록 -->
+            <div class="fifth-text-block">
+                <p>paris match</p>
+            </div>
+        </div>
+        <!-- 네비게이션 원 세 개 -->
+        <div class="navigation">
+            <div class="circle" style="background-color: #B3B3B3;" onclick="navigate(1)"></div>
+            <div class="circle" style="background-color: #E0C0B6;" onclick="navigate(2)"></div>
+            <div class="circle" style="background-color: #B3B3B3;" onclick="navigate(3)"></div>
+        </div>
+    </div>
+
+    <!-- Page 3 -->
+    <div class="container" id="page3" style="display: none;">
+        <!-- 배경 이미지 -->
+        <img src="kirinji.png" alt="Background" class="background">
+        <div class="content">
+            <!-- 첫 번째 텍스트 섹션 -->
+            <div class="text-section" style="color: #C0E2C7;">
+                <p>遥か空に旅客機 音もなく<br>
+                公団の屋根の上 どこへ行く<br>
+                誰かの不機嫌も 寝静まる夜さ<br>
+                バイパスの澄んだ空気と 僕の町<br>
+                泣かないでくれ ダーリン<br>
+                ほら 月明かりが<br>
+                長い夜に寝つけない二人の額を撫でて<br>
+                まるで僕らはエイリアンズ<br>
+                禁断の実 ほおばっては<br>
+                月の裏を夢みて<br>
+                キミが好きだよ エイリアン<br>
+                この星のこの僻地で<br>
+                魔法をかけてみせるさ<br>
+                いいかい どこかで不揃いな 遠吠え<br>
+                仮面のようなスポーツカーが<br>
+                火を吐いた 笑っておくれ ダーリン<br>
+                ほら 素晴らしい夜に<br>
+                僕の短所をジョークにしても眉をひそめないで<br>
+                そうさ僕らはエイリアンズ<br>
+                街灯に沿って歩けば<br>
+                ごらん 新世界のようさ<br>
+                キミが好きだよ エイリアン<br>
+                無いものねだりもキスで<br>
+                魔法のように解けるさ<br>
+                いつか 踊ろうよ さぁ ダーリン<br>
+                ラストダンスを 暗いニュースが<br>
+                日の出とともに町に降る前に<br>
+                まるで僕らはエイリアンズ<br>
+                禁断の実 ほおばっては<br>
+                月の裏を夢みて<br>
+                キミを愛してる エイリアン<br>
+                この星の僻地の僕らに<br>
+                魔法をかけてみせるさ<br>
+                大好さエイリアン<br>
+                わかるかい</p>
+            </div>
+            <!-- 오디오 요소 -->
+            <audio id="audio-player3" src="song3.mp3"></audio>
+            <!-- 오른쪽 이미지 (버튼 역할) -->
+            <img src="song3.jpg" alt="Song Image" class="song-image" onclick="togglePlay3()">
+            <!-- 두 번째 텍스트 블록 -->
+            <div class="text-below-image" style="left: 1425px; top: 585px; font-family: 'Noto Sans JP'; font-weight: 500;">
+                <p>エイリアンズ</p>
+            </div>
+            <!-- 세 번째 텍스트 블록 -->
+            <div class="third-text-block" style="left: 1425px; top: 612px; color: #4C4C4C;">
+                <p>Aliens</p>
+            </div>
+            <!-- 네 번째 텍스트 블록 -->
+            <div class="fourth-text-block">
+                <p>キリンジ</p>
+            </div>
+            <!-- 다섯 번째 텍스트 블록 -->
+            <div class="fifth-text-block" style="color: #E0E0E0;">
+                <p>Kirinji</p>
+            </div>
+        </div>
+        <!-- 네비게이션 원 세 개 -->
+        <div class="navigation">
+            <div class="circle" style="background-color: #B3B3B3;" onclick="navigate(1)"></div>
+            <div class="circle" style="background-color: #B3B3B3;" onclick="navigate(2)"></div>
+            <div class="circle" style="background-color: #C0E2C7;" onclick="navigate(3)"></div>
+        </div>
+    </div>
+
+    <script>
+        // Page 1 오디오 플레이어 제어 함수
+        const audio1 = document.getElementById('audio-player1');
+
+        function togglePlay1() {
+            if (audio1.paused) {
+                audio1.play();
+            } else {
+                audio1.pause();
+            }
+        }
+
+        // Page 2 오디오 플레이어 제어 함수
+        const audio2 = document.getElementById('audio-player2');
+
+        function togglePlay2() {
+            if (audio2.paused) {
+                audio2.play();
+            } else {
+                audio2.pause();
+            }
+        }
+
+        // Page 3 오디오 플레이어 제어 함수
+        const audio3 = document.getElementById('audio-player3');
+
+        function togglePlay3() {
+            if (audio3.paused) {
+                audio3.play();
+            } else {
+                audio3.pause();
+            }
+        }
+
+        function navigate(page) {
+            // 모든 페이지의 오디오를 멈추고 처음부터 재생
+            audio1.pause(); audio1.currentTime = 0;
+            audio2.pause(); audio2.currentTime = 0;
+            audio3.pause(); audio3.currentTime = 0;
+            
+            if (page === 1) {
+                document.getElementById('page1').style.display = 'block';
+                document.getElementById('page2').style.display = 'none';
+                document.getElementById('page3').style.display = 'none';
+            } else if (page === 2) {
+                document.getElementById('page1').style.display = 'none';
+                document.getElementById('page2').style.display = 'block';
+                document.getElementById('page3').style.display = 'none';
+            } else if (page === 3) {
+                document.getElementById('page1').style.display = 'none';
+                document.getElementById('page2').style.display = 'none';
+                document.getElementById('page3').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
